@@ -1,5 +1,3 @@
-#!/usr/bin/env ruby
-
 # Copyright (c) 2017 Salesforce
 # Copyright (c) 2009 37signals, LLC
 #
@@ -23,15 +21,27 @@
 # WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #
 
-require "bundler/setup"
-require "takwimu"
+require 'rails/railtie'
 
-# You can add fixtures and/or initialization code here to make experimenting
-# with your gem easier. You can also use a different console, if you like.
+module Takwimu
+  # Automatically configures barnes to run with
+  # rails 3, 4, and 5. Configuration can be changed
+  # in the application.rb. For example
+  #
+  #   module YourApp
+  #     class Application < Rails::Application
+  #     config.barnes[:interval] = 20
+  #
+  class Railtie < ::Rails::Railtie
+    config.takwimu = {
+      interval:           DEFAULT_INTERVAL,
+      aggregation_period: DEFAULT_AGGREGATION_PERIOD,
+      statsd:             DEFAULT_STATSD,
+      panels:             DEFAULT_PANELS,
+    }
 
-# (If you use this, don't forget to add pry to your Gemfile!)
-# require "pry"
-# Pry.start
-
-require "irb"
-IRB.start(__FILE__)
+    initializer 'takwimu' do |app|
+      Barnes.start(config.takwimu)
+    end
+  end
+end

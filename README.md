@@ -1,6 +1,6 @@
-## Barnes - GC Statsd Reporter
+## takwimu - GC, Rack and Rails Statsd Reporter
 
-A fork of [trashed](https://github.com/basecamp/trashed) focused on Ruby metrics for Heroku.
+A fork of [trashed](https://github.com/basecamp/trashed) and [barnes](https://github.com/heroku/barnes)
 
 ## Setup
 
@@ -9,7 +9,7 @@ A fork of [trashed](https://github.com/basecamp/trashed) focused on Ruby metrics
 On Rails 5 (and Rails 3 and 4), add this to your Gemfile:
 
 ```
-gem "barnes"
+gem "takwimu"
 ```
 
 Then run:
@@ -23,7 +23,7 @@ $ bundle install
 Add the gem to the Gemfile
 
 ```
-gem "barnes"
+gem "takwimu"
 ```
 
 Then run:
@@ -36,12 +36,12 @@ In your application:
 
 
 ```ruby
-require 'barnes'
+require 'takwimu'
 ```
 
 Then you'll need to start the client with default values:
 
 ```ruby
-Barnes.start
+Takwimu.start
 ```
 

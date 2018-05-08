@@ -1,4 +1,4 @@
-require 'barnes'
+require 'takwimu'
 require 'minitest/autorun'
 
 require 'simplecov'

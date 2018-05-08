@@ -1,5 +1,3 @@
-#!/usr/bin/env ruby
-
 # Copyright (c) 2017 Salesforce
 # Copyright (c) 2009 37signals, LLC
 #
@@ -23,15 +21,33 @@
 # WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #
 
-require "bundler/setup"
-require "takwimu"
+module Takwimu
+  module Instruments
+    # Tracks out of band GCs that occurred *since* the last request.
+    class GctoolsOobgc
+      def start!(state)
+        state[:oobgc] = current
+      end
 
-# You can add fixtures and/or initialization code here to make experimenting
-# with your gem easier. You can also use a different console, if you like.
+      def instrument!(state, counters, gauges)
+        last = state[:oobgc]
+        cur = state[:oobgc] = current
 
-# (If you use this, don't forget to add pry to your Gemfile!)
-# require "pry"
-# Pry.start
+        counters.update \
+          :'OOBGC.count'        => cur[:count] - last[:count],
+          :'OOBGC.major_count'  => cur[:major] - last[:major],
+          :'OOBGC.minor_count'  => cur[:minor] - last[:minor],
+          :'OOBGC.sweep_count'  => cur[:sweep] - last[:sweep]
+      end
 
-require "irb"
-IRB.start(__FILE__)
+      private def current
+        {
+          :count => GC::OOB.stat(:count).to_i,
+          :major => GC::OOB.stat(:major).to_i,
+          :minor => GC::OOB.stat(:minor).to_i,
+          :sweep => GC::OOB.stat(:sweep).to_i
+        }
+      end
+    end
+  end
+end

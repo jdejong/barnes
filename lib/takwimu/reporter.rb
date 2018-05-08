@@ -1,5 +1,3 @@
-#!/usr/bin/env ruby
-
 # Copyright (c) 2017 Salesforce
 # Copyright (c) 2009 37signals, LLC
 #
@@ -23,15 +21,43 @@
 # WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #
 
-require "bundler/setup"
-require "takwimu"
+module Takwimu
+  # The reporter is used to send stats to the server.
+  #
+  # Example:
+  #
+  #   statsd   = Statsd.new('127.0.0.1', "8125")
+  #   reporter = Reporter.new(statsd: , sample_rate: 10)
+  #   reporter.report_statsd('barnes.counters' => {"hello" => 2})
+  class Reporter
+    attr_accessor :statsd, :sample_rate
 
-# You can add fixtures and/or initialization code here to make experimenting
-# with your gem easier. You can also use a different console, if you like.
+    def initialize(statsd: , sample_rate:)
+      @statsd      = statsd
+      @sample_rate = sample_rate.to_f
 
-# (If you use this, don't forget to add pry to your Gemfile!)
-# require "pry"
-# Pry.start
+      if @statsd.respond_to?(:easy)
+        @statsd_method = statsd.method(:easy)
+      else
+        @statsd_method = statsd.method(:batch)
+      end
+    end
 
-require "irb"
-IRB.start(__FILE__)
+    def report(env)
+      report_statsd env if @statsd
+    end
+
+    def report_statsd(env)
+      @statsd_method.call do |statsd|
+        env[Barnes::COUNTERS].each do |metric, value|
+          statsd.count(:"Rack.Server.All.#{metric}", value, @sample_rate)
+        end
+
+        # for :gauge, use sample rate of 1, since gauges in statsd have no sampling characteristics.
+        env[Barnes::GAUGES].each do |metric, value|
+          statsd.gauge(:"Rack.Server.All.#{metric}", value, 1.0)
+        end
+      end
+    end
+  end
+end

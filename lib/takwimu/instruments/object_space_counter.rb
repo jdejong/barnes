@@ -1,5 +1,3 @@
-#!/usr/bin/env ruby
-
 # Copyright (c) 2017 Salesforce
 # Copyright (c) 2009 37signals, LLC
 #
@@ -23,15 +21,14 @@
 # WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #
 
-require "bundler/setup"
-require "takwimu"
-
-# You can add fixtures and/or initialization code here to make experimenting
-# with your gem easier. You can also use a different console, if you like.
-
-# (If you use this, don't forget to add pry to your Gemfile!)
-# require "pry"
-# Pry.start
-
-require "irb"
-IRB.start(__FILE__)
+module Takwimu
+  module Instruments
+    class ObjectSpaceCounter
+      def instrument!(state, counters, gauges)
+        ObjectSpace.count_objects.each do |type, count|
+          gauges[:"Objects.#{type}"] = count
+        end
+      end
+    end
+  end
+end

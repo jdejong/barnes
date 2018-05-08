@@ -1,5 +1,3 @@
-#!/usr/bin/env ruby
-
 # Copyright (c) 2017 Salesforce
 # Copyright (c) 2009 37signals, LLC
 #
@@ -23,15 +21,30 @@
 # WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #
 
-require "bundler/setup"
-require "takwimu"
+module Takwimu
+  class Panel
+    def initialize
+      @instruments = []
+    end
 
-# You can add fixtures and/or initialization code here to make experimenting
-# with your gem easier. You can also use a different console, if you like.
+    # Add an instrument to the Panel
+    def instrument(instrument)
+      @instruments << instrument
+    end
 
-# (If you use this, don't forget to add pry to your Gemfile!)
-# require "pry"
-# Pry.start
+    # Initialize the state of each instrument in the panel.
+    def start!(state)
+      @instruments.each do |ins|
+        ins.start! state if ins.respond_to?(:start!)
+      end
+    end
 
-require "irb"
-IRB.start(__FILE__)
+    # Read the values of each instrument into counter_readings,
+    # and gauge_readings. May have side effects on all arguments.
+    def instrument!(state, counter_readings, gauge_readings)
+      @instruments.each do |ins|
+        ins.instrument! state, counter_readings, gauge_readings
+      end
+    end
+  end
+end

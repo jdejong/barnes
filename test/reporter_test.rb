@@ -1,5 +1,5 @@
-require 'barnes/test_helper'
-require 'barnes/reporter'
+require 'takwimu/test_helper'
+require 'takwimu/reporter'
 require 'logger'
 require 'stringio'
 
@@ -21,10 +21,10 @@ class ReporterTest < Minitest::Test
 
     statsd = Statsd.new batch
 
-    reporter = Barnes::Reporter.new(statsd: statsd, sample_rate: 1)
+    reporter = Takwimu::Reporter.new(statsd: statsd, sample_rate: 1)
     reporter.report_statsd \
-                Barnes::COUNTERS => { :'GC.allocated_objects' => 10 }, \
-                Barnes::GAUGES => { :'Time.pct.cpu' => 9.1 }
+                Takwimu::COUNTERS => { :'GC.allocated_objects' => 10 }, \
+                Takwimu::GAUGES => { :'Time.pct.cpu' => 9.1 }
 
     batch.verify
   end

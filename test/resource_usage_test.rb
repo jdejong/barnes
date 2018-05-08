@@ -1,11 +1,11 @@
-require 'barnes/test_helper'
-require 'barnes/resource_usage'
+require 'takwimu/test_helper'
+require 'takwimu/resource_usage'
 
 class ResourceUsageTest < Minitest::Test
   def setup
     super
     @state = {}
-    @panel = Barnes::ResourceUsage.new(1)
+    @panel = Takwimu::ResourceUsage.new(1)
     @panel.start! @state
   end
 
