@@ -21,7 +21,7 @@
 # WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #
 
-require 'barnes/panel'
+require 'takwimu/panel'
 
 module Takwimu
   class ResourceUsage < Panel

@@ -2,30 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="da7027d0-84d7-4749-815f-7f941e9f0cda" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/lib/takwimu/instruments/passenger_stats.rb" />
       <change beforePath="" afterPath="$PROJECT_DIR$/passenger.xml" />
-      <change beforePath="$PROJECT_DIR$/CHANGELOG.md" afterPath="$PROJECT_DIR$/CHANGELOG.md" />
-      <change beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
-      <change beforePath="$PROJECT_DIR$/barnes.gemspec" afterPath="$PROJECT_DIR$/takwimu.gemspec" />
-      <change beforePath="$PROJECT_DIR$/bin/console" afterPath="$PROJECT_DIR$/bin/console" />
-      <change beforePath="$PROJECT_DIR$/init.rb" afterPath="$PROJECT_DIR$/init.rb" />
-      <change beforePath="$PROJECT_DIR$/lib/barnes.rb" afterPath="$PROJECT_DIR$/lib/takwimu.rb" />
-      <change beforePath="$PROJECT_DIR$/lib/barnes/consts.rb" afterPath="$PROJECT_DIR$/lib/takwimu/consts.rb" />
-      <change beforePath="$PROJECT_DIR$/lib/barnes/instruments/gctools_oobgc.rb" afterPath="$PROJECT_DIR$/lib/takwimu/instruments/gctools_oobgc.rb" />
-      <change beforePath="$PROJECT_DIR$/lib/barnes/instruments/object_space_counter.rb" afterPath="$PROJECT_DIR$/lib/takwimu/instruments/object_space_counter.rb" />
-      <change beforePath="$PROJECT_DIR$/lib/barnes/instruments/puma_backlog.rb" afterPath="$PROJECT_DIR$/lib/takwimu/instruments/puma_backlog.rb" />
-      <change beforePath="$PROJECT_DIR$/lib/barnes/instruments/ree_gc.rb" afterPath="$PROJECT_DIR$/lib/takwimu/instruments/ree_gc.rb" />
-      <change beforePath="$PROJECT_DIR$/lib/barnes/instruments/ruby_gc.rb" afterPath="$PROJECT_DIR$/lib/takwimu/instruments/ruby_gc.rb" />
-      <change beforePath="$PROJECT_DIR$/lib/barnes/instruments/stopwatch.rb" afterPath="$PROJECT_DIR$/lib/takwimu/instruments/stopwatch.rb" />
-      <change beforePath="$PROJECT_DIR$/lib/barnes/panel.rb" afterPath="$PROJECT_DIR$/lib/takwimu/panel.rb" />
-      <change beforePath="$PROJECT_DIR$/lib/barnes/periodic.rb" afterPath="$PROJECT_DIR$/lib/takwimu/periodic.rb" />
-      <change beforePath="$PROJECT_DIR$/lib/barnes/railtie.rb" afterPath="$PROJECT_DIR$/lib/takwimu/railtie.rb" />
-      <change beforePath="$PROJECT_DIR$/lib/barnes/reporter.rb" afterPath="$PROJECT_DIR$/lib/takwimu/reporter.rb" />
-      <change beforePath="$PROJECT_DIR$/lib/barnes/resource_usage.rb" afterPath="$PROJECT_DIR$/lib/takwimu/resource_usage.rb" />
-      <change beforePath="$PROJECT_DIR$/lib/barnes/version.rb" afterPath="$PROJECT_DIR$/lib/takwimu/version.rb" />
-      <change beforePath="$PROJECT_DIR$/test/lib/barnes/test_helper.rb" afterPath="$PROJECT_DIR$/test/lib/barnes/test_helper.rb" />
-      <change beforePath="$PROJECT_DIR$/test/reporter_test.rb" afterPath="$PROJECT_DIR$/test/reporter_test.rb" />
-      <change beforePath="$PROJECT_DIR$/test/resource_usage_test.rb" afterPath="$PROJECT_DIR$/test/resource_usage_test.rb" />
+      <change beforePath="$PROJECT_DIR$/lib/takwimu/periodic.rb" afterPath="$PROJECT_DIR$/lib/takwimu/periodic.rb" />
+      <change beforePath="$PROJECT_DIR$/lib/takwimu/resource_usage.rb" afterPath="$PROJECT_DIR$/lib/takwimu/resource_usage.rb" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -36,104 +15,101 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/README.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="30">
-                <caret line="2" column="70" lean-forward="false" selection-start-line="2" selection-start-column="70" selection-end-line="2" selection-end-column="70" />
-                <folding />
-              </first_editor>
-              <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Rakefile" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Rakefile">
+      <file leaf-file-name="resource_usage.rb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/takwimu/resource_usage.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="172">
+              <caret line="23" column="10" lean-forward="false" selection-start-line="23" selection-start-column="10" selection-end-line="23" selection-end-column="10" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="passenger.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/passenger.xml">
+      <file leaf-file-name="reporter.rb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/takwimu/reporter.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="450">
-              <caret line="69" column="24" lean-forward="false" selection-start-line="69" selection-start-column="13" selection-end-line="69" selection-end-column="24" />
+            <state relative-caret-position="345">
+              <caret line="23" column="14" lean-forward="false" selection-start-line="23" selection-start-column="14" selection-end-line="23" selection-end-column="14" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MIT-LICENSE" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/MIT-LICENSE">
+      <file leaf-file-name="passenger_stats.rb" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/lib/takwimu/instruments/passenger_stats.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="644">
+              <caret line="55" column="36" lean-forward="false" selection-start-line="55" selection-start-column="36" selection-end-line="55" selection-end-column="36" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="init.rb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/init.rb">
+      <file leaf-file-name="ree_gc.rb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/takwimu/instruments/ree_gc.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="24" column="0" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+            <state relative-caret-position="345">
+              <caret line="23" column="14" lean-forward="false" selection-start-line="23" selection-start-column="14" selection-end-line="23" selection-end-column="14" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Gemfile" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Gemfile">
+      <file leaf-file-name="railtie.rb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/takwimu/railtie.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="3" column="4" lean-forward="false" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="4" />
+            <state relative-caret-position="525">
+              <caret line="35" column="18" lean-forward="false" selection-start-line="35" selection-start-column="11" selection-end-line="35" selection-end-column="18" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Gemfile.lock" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Gemfile.lock">
+      <file leaf-file-name="ruby_gc.rb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/takwimu/instruments/ruby_gc.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="435">
+              <caret line="29" column="14" lean-forward="false" selection-start-line="29" selection-start-column="14" selection-end-line="29" selection-end-column="14" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="console" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/bin/console">
+      <file leaf-file-name="stopwatch.rb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/takwimu/instruments/stopwatch.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="390">
-              <caret line="26" column="16" lean-forward="false" selection-start-line="26" selection-start-column="16" selection-end-line="26" selection-end-column="16" />
+            <state relative-caret-position="420">
+              <caret line="28" column="11" lean-forward="false" selection-start-line="28" selection-start-column="11" selection-end-line="28" selection-end-column="11" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="setup" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/bin/setup">
+      <file leaf-file-name="panel.rb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/takwimu/panel.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="480">
-              <caret line="32" column="0" lean-forward="false" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+            <state relative-caret-position="345">
+              <caret line="23" column="14" lean-forward="false" selection-start-line="23" selection-start-column="14" selection-end-line="23" selection-end-column="14" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="takwimu.gemspec" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/takwimu.gemspec">
+      <file leaf-file-name="consts.rb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/takwimu/consts.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="6" column="29" lean-forward="true" selection-start-line="6" selection-start-column="29" selection-end-line="6" selection-end-column="29" />
+            <state relative-caret-position="75">
+              <caret line="5" column="69" lean-forward="true" selection-start-line="5" selection-start-column="69" selection-end-line="5" selection-end-column="69" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="periodic.rb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/takwimu/periodic.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="82">
+              <caret line="23" column="10" lean-forward="false" selection-start-line="23" selection-start-column="10" selection-end-line="23" selection-end-column="10" />
               <folding />
             </state>
           </provider>
@@ -153,7 +129,6 @@
         <option value="$PROJECT_DIR$/barnes.gemspec" />
         <option value="$PROJECT_DIR$/lib/takwimu/version.rb" />
         <option value="$PROJECT_DIR$/lib/takwimu/reporter.rb" />
-        <option value="$PROJECT_DIR$/lib/takwimu/periodic.rb" />
         <option value="$PROJECT_DIR$/lib/takwimu/panel.rb" />
         <option value="$PROJECT_DIR$/lib/takwimu/instruments/gctools_oobgc.rb" />
         <option value="$PROJECT_DIR$/lib/takwimu/instruments/object_space_counter.rb" />
@@ -164,7 +139,6 @@
         <option value="$PROJECT_DIR$/passenger.xml" />
         <option value="$PROJECT_DIR$/lib/takwimu/instruments/passenger_stats.rb" />
         <option value="$PROJECT_DIR$/lib/takwimu.rb" />
-        <option value="$PROJECT_DIR$/lib/takwimu/resource_usage.rb" />
         <option value="$PROJECT_DIR$/lib/takwimu/railtie.rb" />
         <option value="$PROJECT_DIR$/lib/takwimu/consts.rb" />
         <option value="$PROJECT_DIR$/test/lib/barnes/test_helper.rb" />
@@ -172,6 +146,8 @@
         <option value="$PROJECT_DIR$/test/resource_usage_test.rb" />
         <option value="$PROJECT_DIR$/CHANGELOG.md" />
         <option value="$PROJECT_DIR$/bin/console" />
+        <option value="$PROJECT_DIR$/lib/takwimu/resource_usage.rb" />
+        <option value="$PROJECT_DIR$/lib/takwimu/periodic.rb" />
       </list>
     </option>
   </component>
@@ -290,18 +266,17 @@
       <option name="presentableId" value="Default" />
       <updated>1525452960101</updated>
       <workItem from="1525452962963" duration="2956000" />
-      <workItem from="1525579015832" duration="10144000" />
+      <workItem from="1525579015832" duration="10779000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="13100000" />
+    <option name="totallyTimeSpent" value="13735000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1920" height="1012" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.171459" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.171459" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Statistic" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -353,77 +328,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/takwimu/reporter.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="23" column="14" lean-forward="false" selection-start-line="23" selection-start-column="14" selection-end-line="23" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/takwimu/instruments/ruby_gc.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="29" column="14" lean-forward="false" selection-start-line="29" selection-start-column="14" selection-end-line="29" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/takwimu/instruments/passenger_stats.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="644">
-          <caret line="55" column="36" lean-forward="false" selection-start-line="55" selection-start-column="36" selection-end-line="55" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/takwimu/version.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="23" column="14" lean-forward="false" selection-start-line="23" selection-start-column="7" selection-end-line="23" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/takwimu/resource_usage.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="705">
-          <caret line="60" column="26" lean-forward="false" selection-start-line="60" selection-start-column="26" selection-end-line="60" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/takwimu/periodic.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="25" column="14" lean-forward="false" selection-start-line="25" selection-start-column="14" selection-end-line="25" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/takwimu/panel.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="23" column="14" lean-forward="false" selection-start-line="23" selection-start-column="14" selection-end-line="23" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/takwimu/consts.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="69" lean-forward="true" selection-start-line="5" selection-start-column="69" selection-end-line="5" selection-end-column="69" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/takwimu/instruments/stopwatch.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="28" column="11" lean-forward="false" selection-start-line="28" selection-start-column="11" selection-end-line="28" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lib/takwimu/instruments/gctools_oobgc.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="345">
@@ -444,30 +348,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="390">
           <caret line="26" column="9" lean-forward="false" selection-start-line="26" selection-start-column="9" selection-end-line="26" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/takwimu/instruments/ree_gc.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="23" column="14" lean-forward="false" selection-start-line="23" selection-start-column="14" selection-end-line="23" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/takwimu.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="23" column="14" lean-forward="false" selection-start-line="23" selection-start-column="7" selection-end-line="23" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/takwimu/railtie.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="35" column="18" lean-forward="false" selection-start-line="35" selection-start-column="11" selection-end-line="35" selection-end-column="18" />
           <folding />
         </state>
       </provider>
@@ -608,8 +488,104 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/takwimu.gemspec">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="29" lean-forward="true" selection-start-line="6" selection-start-column="29" selection-end-line="6" selection-end-column="29" />
+        <state relative-caret-position="45">
+          <caret line="3" column="16" lean-forward="false" selection-start-line="3" selection-start-column="9" selection-end-line="3" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/takwimu.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="23" column="14" lean-forward="false" selection-start-line="23" selection-start-column="7" selection-end-line="23" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/takwimu/version.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="23" column="14" lean-forward="false" selection-start-line="23" selection-start-column="7" selection-end-line="23" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/takwimu/resource_usage.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="172">
+          <caret line="23" column="10" lean-forward="false" selection-start-line="23" selection-start-column="10" selection-end-line="23" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/takwimu/periodic.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="82">
+          <caret line="23" column="10" lean-forward="false" selection-start-line="23" selection-start-column="10" selection-end-line="23" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/takwimu/reporter.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="23" column="14" lean-forward="false" selection-start-line="23" selection-start-column="14" selection-end-line="23" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/takwimu/railtie.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="525">
+          <caret line="35" column="18" lean-forward="false" selection-start-line="35" selection-start-column="11" selection-end-line="35" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/takwimu/panel.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="23" column="14" lean-forward="false" selection-start-line="23" selection-start-column="14" selection-end-line="23" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/takwimu/consts.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="69" lean-forward="true" selection-start-line="5" selection-start-column="69" selection-end-line="5" selection-end-column="69" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/takwimu/instruments/stopwatch.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="28" column="11" lean-forward="false" selection-start-line="28" selection-start-column="11" selection-end-line="28" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/takwimu/instruments/ruby_gc.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="29" column="14" lean-forward="false" selection-start-line="29" selection-start-column="14" selection-end-line="29" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/takwimu/instruments/ree_gc.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="23" column="14" lean-forward="false" selection-start-line="23" selection-start-column="14" selection-end-line="23" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/takwimu/instruments/passenger_stats.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="644">
+          <caret line="55" column="36" lean-forward="false" selection-start-line="55" selection-start-column="36" selection-end-line="55" selection-end-column="36" />
           <folding />
         </state>
       </provider>

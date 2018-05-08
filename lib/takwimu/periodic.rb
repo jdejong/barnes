@@ -21,7 +21,7 @@
 # WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #
 
-require 'barnes/consts'
+require 'takwimu/consts'
 
 module Takwimu
   # The periodic class is used to send occasional metrics
