@@ -41,7 +41,7 @@ module Takwimu
     }
 
     initializer 'takwimu' do |app|
-      Barnes.start(config.takwimu)
+      Takwimu.start(config.takwimu)
     end
   end
 end
