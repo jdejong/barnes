@@ -27,20 +27,25 @@ module Takwimu
   # The periodic class is used to send occasional metrics
   # to a reporting instance of `Barnes::Reporter` at a semi-regular
   # rate.
+
+
+
   class Periodic
     def initialize(reporter:, sample_rate: 1, panels: [])
       @reporter = reporter
       @reporter.sample_rate = sample_rate
 
+      @default_interval = 5.0
+
       # compute interval based on a 60s reporting phase.
-      @interval = sample_rate * 60.0
+      @interval = sample_rate * @default_interval
       @panels = panels
 
       @thread = Thread.new {
-        Thread.current[:barnes_state] = {}
+        Thread.current[:takwimu_state] = {}
 
         @panels.each do |panel|
-          panel.start! Thread.current[:barnes_state]
+          panel.start! Thread.current[:takwimu_state]
         end
 
         loop do
@@ -49,7 +54,7 @@ module Takwimu
 
             # read the current values
             env = {
-              STATE    => Thread.current[:barnes_state],
+              STATE    => Thread.current[:takwimu_state],
               COUNTERS => {},
               GAUGES   => {}
             }

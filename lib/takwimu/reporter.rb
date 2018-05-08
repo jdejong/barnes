@@ -49,12 +49,12 @@ module Takwimu
 
     def report_statsd(env)
       @statsd_method.call do |statsd|
-        env[Barnes::COUNTERS].each do |metric, value|
+        env[Takwimu::COUNTERS].each do |metric, value|
           statsd.count(:"Rack.Server.All.#{metric}", value, @sample_rate)
         end
 
         # for :gauge, use sample rate of 1, since gauges in statsd have no sampling characteristics.
-        env[Barnes::GAUGES].each do |metric, value|
+        env[Takwimu::GAUGES].each do |metric, value|
           statsd.gauge(:"Rack.Server.All.#{metric}", value, 1.0)
         end
       end

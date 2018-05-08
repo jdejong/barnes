@@ -35,6 +35,14 @@ module Takwimu
         instrument backlog_reporter
       end
 
+      require 'takwimu/instruments/passenger_stats'
+      passenger_stats_reporter = Takwimu::Instruments::PassengerStats.new
+
+      if passenger_stats_reporter.valid?
+        instrument passenger_stats_reporter
+      end
+
+
       require 'takwimu/instruments/stopwatch'
       instrument Takwimu::Instruments::Stopwatch.new
 
