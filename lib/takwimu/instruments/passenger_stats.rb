@@ -47,6 +47,7 @@ module Takwimu
         #raise e unless e.message =~ /nil/
         #raise e unless e.message =~ /stats/
         Takwimu.config.logger.error "Takwimu.PassengerStats #{e.message}" if Takwimu.config.logger
+        Takwimu.config.logger.error "Takwimu.PassengerStats #{e.backtrace.inspect}" if Takwimu.config.logger
         return {}
       end
 
