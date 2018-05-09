@@ -25,11 +25,11 @@
 
 
 module Takwimu
-  DEFAULT_INTERVAL           = 10
-  DEFAULT_AGGREGATION_PERIOD = 60
-  DEFAULT_STATSD             = :default
-  DEFAULT_PANELS             = []
-  DEFAULT_HOSTNAME           = "#{Socket.gethostname}"
+  # DEFAULT_INTERVAL           = 10
+  # DEFAULT_AGGREGATION_PERIOD = 60
+  # DEFAULT_STATSD             = :default
+  # DEFAULT_PANELS             = []
+  # DEFAULT_HOSTNAME           = "#{Socket.gethostname}"
 
   class << self
     attr_accessor :config

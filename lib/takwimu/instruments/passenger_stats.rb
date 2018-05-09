@@ -14,11 +14,14 @@ module Takwimu
       end
 
       def start!(state)
-
+        require 'nokogiri'
+        require 'open-uri'
       end
 
       def json_stats
         doc = Nokogiri::XML(`sudo /usr/sbin/passenger-status --show=xml`)
+
+        Takwimu.config.logger.error "Takwimu.json_stats - doc = #{doc.inspect}" if Takwimu.config.logger
 
         stats = {
             process_count: doc.xpath('//process_count').children[0].to_s,
