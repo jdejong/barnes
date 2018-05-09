@@ -48,6 +48,9 @@ module Takwimu
 
       def instrument!(state, counters, gauges)
         stats = self.json_stats
+
+        Takwimu.config.logger.debug "Takwimu.PassengerStats.instrument!! Stats - #{stats.inspect}" if Takwimu.config.logger
+
         return if stats.empty?
 
         gauges[:"passenger.process_count"] = stats[:process_count]

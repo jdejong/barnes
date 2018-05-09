@@ -1,0 +1,5 @@
+require 'takwimu'
+require 'minitest/autorun'
+
+require 'simplecov'
+SimpleCov.start

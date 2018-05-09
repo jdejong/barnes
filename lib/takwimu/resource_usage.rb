@@ -39,6 +39,7 @@ module Takwimu
       passenger_stats_reporter = Takwimu::Instruments::PassengerStats.new
 
       if passenger_stats_reporter.valid?
+        Takwimu.config.logger.debug "Takwimu.ResourceUsage.initialize - Setting up Passenger Instrumentation" if Takwimu.config.logger
         instrument passenger_stats_reporter
       end
 

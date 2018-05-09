@@ -33,15 +33,14 @@ module Takwimu
   #     config.barnes[:interval] = 20
   #
   class Railtie < ::Rails::Railtie
-    config.takwimu = {
-      interval:           DEFAULT_INTERVAL,
-      aggregation_period: DEFAULT_AGGREGATION_PERIOD,
-      statsd:             DEFAULT_STATSD,
-      panels:             DEFAULT_PANELS,
-    }
 
     initializer 'takwimu' do |app|
-      Takwimu.start(config.takwimu)
+
+      Takwimu.configure do |config|
+        config.logger = Rails.logger
+      end
+
+      Takwimu.start()
     end
   end
 end
