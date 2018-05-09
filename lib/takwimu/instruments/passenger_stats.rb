@@ -40,16 +40,18 @@ module Takwimu
         end
 
         return stats
-      rescue NoMethodError => e
-        raise e unless e.message =~ /nil/
-        raise e unless e.message =~ /stats/
+      rescue StandardError => e
+        #raise e unless e.message =~ /nil/
+        #raise e unless e.message =~ /stats/
+        Takwimu.config.logger.error "Takwimu.PassengerStats #{e.message}" if Takwimu.config.logger
         return {}
       end
 
       def instrument!(state, counters, gauges)
+        Takwimu.config.logger.debug "Takwimu.PassengerStats.instrument!" if Takwimu.config.logger
         stats = self.json_stats
 
-        Takwimu.config.logger.debug "Takwimu.PassengerStats.instrument!! Stats - #{stats.inspect}" if Takwimu.config.logger
+        Takwimu.config.logger.debug "Takwimu.PassengerStats.instrument! Stats - #{stats.inspect}" if Takwimu.config.logger
 
         return if stats.empty?
 
