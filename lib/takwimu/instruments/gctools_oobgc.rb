@@ -29,7 +29,7 @@ module Takwimu
         state[:oobgc] = current
       end
 
-      def instrument!(state, counters, gauges)
+      def instrument!(state, counters, gauges, timers)
         last = state[:oobgc]
         cur = state[:oobgc] = current
 

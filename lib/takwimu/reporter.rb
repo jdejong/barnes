@@ -58,6 +58,10 @@ module Takwimu
         env[Takwimu::GAUGES].each do |metric, value|
           statsd.gauge(:"#{hostname}.rack.#{metric}", value, 1.0)
         end
+
+        env[Takwimu::TIMERS].each do |metric, value|
+          statsd.timing(:"#{hostname}.rack.#{metric}", value, 1.0)
+        end
       end
     end
   end

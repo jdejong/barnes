@@ -59,7 +59,7 @@ module Takwimu
         state[:ruby_gc] = GC.stat
       end
 
-      def instrument!(state, counters, gauges)
+      def instrument!(state, counters, gauges, timers)
         last = state[:ruby_gc]
         cur = state[:ruby_gc] = GC.stat
 

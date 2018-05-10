@@ -35,6 +35,8 @@ module Takwimu
         instrument backlog_reporter
       end
 
+      ## NOTE: To get passenger stats you must be running Passenger as a user with sudo access
+
       require 'takwimu/instruments/passenger_stats'
       passenger_stats_reporter = Takwimu::Instruments::PassengerStats.new
 

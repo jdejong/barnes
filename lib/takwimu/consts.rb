@@ -22,5 +22,5 @@
 #
 
 module Takwimu
-  STATE, COUNTERS, GAUGES = 'takwimu.state', 'takwimu.counters', 'takwimu.gauges'
+  STATE, COUNTERS, GAUGES, TIMERS = 'takwimu.state', 'takwimu.counters', 'takwimu.gauges', 'takwimu.timers'
 end

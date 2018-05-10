@@ -33,7 +33,7 @@ module Takwimu
         state[:stopwatch] = current
       end
 
-      def instrument!(state, counters, gauges)
+      def instrument!(state, counters, gauges, timers)
         last = state[:stopwatch]
         wall_elapsed = @timepiece.wall - last[:wall]
         counters[:'Time.wall'] = wall_elapsed

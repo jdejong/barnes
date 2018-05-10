@@ -32,7 +32,7 @@ module Takwimu
         state[:ruby18_gc] = current
       end
 
-      def instrument!(state, counters, gauges)
+      def instrument!(state, counters, gauges, timers)
         last = state[:ruby18_gc]
         cur = state[:ruby18_gc] = current
 

@@ -24,7 +24,7 @@
 module Takwimu
   module Instruments
     class ObjectSpaceCounter
-      def instrument!(state, counters, gauges)
+      def instrument!(state, counters, gauges, timers)
         ObjectSpace.count_objects.each do |type, count|
           gauges[:"Objects.#{type}"] = count
         end

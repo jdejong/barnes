@@ -56,11 +56,12 @@ module Takwimu
             env = {
               STATE    => Thread.current[:takwimu_state],
               COUNTERS => {},
-              GAUGES   => {}
+              GAUGES   => {},
+              TIMERS   => {}
             }
 
             @panels.each do |panel|
-              panel.instrument! env[STATE], env[COUNTERS], env[GAUGES]
+              panel.instrument! env[STATE], env[COUNTERS], env[GAUGES], env[TIMERS]
             end
             @reporter.report env
           end

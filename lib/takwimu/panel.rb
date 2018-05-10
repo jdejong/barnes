@@ -41,9 +41,9 @@ module Takwimu
 
     # Read the values of each instrument into counter_readings,
     # and gauge_readings. May have side effects on all arguments.
-    def instrument!(state, counter_readings, gauge_readings)
+    def instrument!(state, counter_readings, gauge_readings, timer_readings)
       @instruments.each do |ins|
-        ins.instrument! state, counter_readings, gauge_readings
+        ins.instrument! state, counter_readings, gauge_readings, timer_readings
       end
     end
   end

@@ -30,7 +30,7 @@ module Takwimu
       # for multiple workers sum backlog.
       #
       # https://github.com/puma/puma/pull/1532
-      def instrument!(state, counters, gauges)
+      def instrument!(state, counters, gauges, timers)
         stats = self.json_stats
         return if stats.empty?
 

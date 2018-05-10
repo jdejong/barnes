@@ -22,6 +22,8 @@
 #
 
 require 'rails/railtie'
+require 'takwimu/notifications/action_controller'
+require 'takwimu/notifications/active_record'
 
 module Takwimu
   # Automatically configures barnes to run with
@@ -40,7 +42,13 @@ module Takwimu
         config.logger = Rails.logger
       end
 
-      Takwimu.start()
+      #Start thread to send periodic stats
+      Takwimu.start
+
+      #Subscribe for per request stats
+      Takwimu::Notifications::ActionController.subscribe!
+      Takwimu::Notifications::ActiveRecord.subscribe!
+
     end
   end
 end

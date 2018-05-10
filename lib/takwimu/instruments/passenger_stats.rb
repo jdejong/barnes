@@ -20,8 +20,8 @@ module Takwimu
 
       def json_stats
         doc = Nokogiri::XML(`sudo /usr/sbin/passenger-status --show=xml`)
-
-        Takwimu.config.logger.error "Takwimu.json_stats - doc = #{doc.to_xml}" if Takwimu.config.logger
+        Takwimu.config.logger.error "Takwimu.json_stats - doc.blank? = #{doc.blank?}" if Takwimu.config.logger
+        return {} if doc.blank?
 
         stats = {
             process_count: doc.xpath('//process_count').children[0].to_s,
@@ -30,10 +30,6 @@ module Takwimu
             top_level_queue: doc.xpath('//get_wait_list_size').children[0].to_s,
             processes: []
         }
-
-        Takwimu.config.logger.error "Takwimu.json_stats - stats = #{stats}" if Takwimu.config.logger
-
-        Takwimu.config.logger.error "Takwimu.json_stats - supergroups = #{doc.xpath('//supergroups')[0]}" if Takwimu.config.logger
 
         doc.xpath('//supergroups')[0].xpath('./supergroup').each do |supergroup|
           supergroup.xpath('./group/processes/process').each_with_index do |process, i|
@@ -55,7 +51,7 @@ module Takwimu
         return {}
       end
 
-      def instrument!(state, counters, gauges)
+      def instrument!(state, counters, gauges, timers)
         Takwimu.config.logger.debug "Takwimu.PassengerStats.instrument!" if Takwimu.config.logger
         stats = self.json_stats
 
