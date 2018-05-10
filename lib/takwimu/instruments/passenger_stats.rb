@@ -21,7 +21,7 @@ module Takwimu
       def json_stats
         doc = Nokogiri::XML(`sudo /usr/sbin/passenger-status --show=xml`)
 
-        Takwimu.config.logger.error "Takwimu.json_stats - doc = #{doc.to_s}" if Takwimu.config.logger
+        Takwimu.config.logger.error "Takwimu.json_stats - doc = #{doc.to_xml}" if Takwimu.config.logger
 
         stats = {
             process_count: doc.xpath('//process_count').children[0].to_s,
