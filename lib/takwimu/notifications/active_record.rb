@@ -6,6 +6,10 @@ module Takwimu
   module Notifications
     class ActiveRecord < Base
 
+      SELECT_DELETE = / FROM `(w+)`/
+      INSERT = /^INSERT INTO `(w+)`/
+      UPDATE = /^UPDATE `(w+)`/
+
       def self.event_name
         "sql.active_record"
       end
@@ -17,20 +21,20 @@ module Takwimu
         case payload[:sql]
           when /^SELECT/
             payload[:sql] =~ SELECT_DELETE
-            $statsd.increment("#{hostname}.sql.select")
-            $statsd.timing("#{hostname}.sql.#{$1}.select.query_time", (finish - start) * 1000, 1)
+            statsd_client.increment("#{hostname}.sql.select")
+            statsd_client.timing("#{hostname}.sql.#{$1}.select.query_time", (finish - start) * 1000, 1)
           when /^DELETE/
             payload[:sql] =~ SELECT_DELETE
-            $statsd.increment("#{hostname}.sql.delete")
-            $statsd.timing("#{hostname}.sql.#{$1}.delete.query_time", (finish - start) * 1000, 1)
+            statsd_client.increment("#{hostname}.sql.delete")
+            statsd_client.timing("#{hostname}.sql.#{$1}.delete.query_time", (finish - start) * 1000, 1)
           when /^INSERT/
             payload[:sql] =~ INSERT
-            $statsd.increment("#{hostname}.sql.insert")
-            $statsd.timing("#{hostname}.sql.#{$1}.insert.query_time", (finish - start) * 1000, 1)
+            statsd_client.increment("#{hostname}.sql.insert")
+            statsd_client.timing("#{hostname}.sql.#{$1}.insert.query_time", (finish - start) * 1000, 1)
           when /^UPDATE/
             payload[:sql] =~ UPDATE
-            $statsd.increment("#{hostname}.sql.update"  )
-            $statsd.timing("#{hostname}.sql.#{$1}.update.query_time", (finish - start) * 1000, 1)
+            statsd_client.increment("#{hostname}.sql.update"  )
+            statsd_client.timing("#{hostname}.sql.#{$1}.update.query_time", (finish - start) * 1000, 1)
         end
       end
     end

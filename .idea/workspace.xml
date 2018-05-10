@@ -2,27 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="da7027d0-84d7-4749-815f-7f941e9f0cda" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/lib/takwimu/instruments/rails_request.rb" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/lib/takwimu/notifications/action_controller.rb" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/lib/takwimu/notifications/active_record.rb" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/lib/takwimu/notifications/base.rb" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/lib/takwimu/rack.rb" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/lib/takwimu/request_statistics.rb" />
       <change beforePath="" afterPath="$PROJECT_DIR$/passenger.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/lib/takwimu/consts.rb" afterPath="$PROJECT_DIR$/lib/takwimu/consts.rb" />
-      <change beforePath="$PROJECT_DIR$/lib/takwimu/instruments/gctools_oobgc.rb" afterPath="$PROJECT_DIR$/lib/takwimu/instruments/gctools_oobgc.rb" />
-      <change beforePath="$PROJECT_DIR$/lib/takwimu/instruments/object_space_counter.rb" afterPath="$PROJECT_DIR$/lib/takwimu/instruments/object_space_counter.rb" />
-      <change beforePath="$PROJECT_DIR$/lib/takwimu/instruments/passenger_stats.rb" afterPath="$PROJECT_DIR$/lib/takwimu/instruments/passenger_stats.rb" />
-      <change beforePath="$PROJECT_DIR$/lib/takwimu/instruments/puma_backlog.rb" afterPath="$PROJECT_DIR$/lib/takwimu/instruments/puma_backlog.rb" />
-      <change beforePath="$PROJECT_DIR$/lib/takwimu/instruments/ree_gc.rb" afterPath="$PROJECT_DIR$/lib/takwimu/instruments/ree_gc.rb" />
-      <change beforePath="$PROJECT_DIR$/lib/takwimu/instruments/ruby_gc.rb" afterPath="$PROJECT_DIR$/lib/takwimu/instruments/ruby_gc.rb" />
-      <change beforePath="$PROJECT_DIR$/lib/takwimu/instruments/stopwatch.rb" afterPath="$PROJECT_DIR$/lib/takwimu/instruments/stopwatch.rb" />
-      <change beforePath="$PROJECT_DIR$/lib/takwimu/panel.rb" afterPath="$PROJECT_DIR$/lib/takwimu/panel.rb" />
-      <change beforePath="$PROJECT_DIR$/lib/takwimu/periodic.rb" afterPath="$PROJECT_DIR$/lib/takwimu/periodic.rb" />
-      <change beforePath="$PROJECT_DIR$/lib/takwimu/railtie.rb" afterPath="$PROJECT_DIR$/lib/takwimu/railtie.rb" />
-      <change beforePath="$PROJECT_DIR$/lib/takwimu/reporter.rb" afterPath="$PROJECT_DIR$/lib/takwimu/reporter.rb" />
-      <change beforePath="$PROJECT_DIR$/lib/takwimu/resource_usage.rb" afterPath="$PROJECT_DIR$/lib/takwimu/resource_usage.rb" />
+      <change beforePath="$PROJECT_DIR$/lib/takwimu/notifications/active_record.rb" afterPath="$PROJECT_DIR$/lib/takwimu/notifications/active_record.rb" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -96,8 +77,8 @@
       <file leaf-file-name="active_record.rb" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/lib/takwimu/notifications/active_record.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="525">
-              <caret line="35" column="7" lean-forward="true" selection-start-line="35" selection-start-column="7" selection-end-line="35" selection-end-column="7" />
+            <state relative-caret-position="270">
+              <caret line="18" column="42" lean-forward="false" selection-start-line="18" selection-start-column="42" selection-end-line="18" selection-end-column="42" />
               <folding />
             </state>
           </provider>
@@ -287,12 +268,12 @@
       <option name="presentableId" value="Default" />
       <updated>1525452960101</updated>
       <workItem from="1525452962963" duration="2956000" />
-      <workItem from="1525579015832" duration="46571000" />
+      <workItem from="1525579015832" duration="46730000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="49527000" />
+    <option name="totallyTimeSpent" value="49686000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1920" y="23" width="1920" height="1057" extended-state="6" />
@@ -662,8 +643,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/takwimu/notifications/active_record.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="35" column="7" lean-forward="true" selection-start-line="35" selection-start-column="7" selection-end-line="35" selection-end-column="7" />
+        <state relative-caret-position="270">
+          <caret line="18" column="42" lean-forward="false" selection-start-line="18" selection-start-column="42" selection-end-line="18" selection-end-column="42" />
           <folding />
         </state>
       </provider>
