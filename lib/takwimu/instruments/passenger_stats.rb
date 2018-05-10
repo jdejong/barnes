@@ -31,6 +31,8 @@ module Takwimu
             processes: []
         }
 
+        Takwimu.config.logger.error "Takwimu.json_stats - stats = #{stats}" if Takwimu.config.logger
+
         Takwimu.config.logger.error "Takwimu.json_stats - supergroups = #{doc.xpath('//supergroups')[0]}" if Takwimu.config.logger
 
         doc.xpath('//supergroups')[0].xpath('./supergroup').each do |supergroup|
