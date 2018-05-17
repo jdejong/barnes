@@ -6,7 +6,19 @@ We had some of this functionality baked into our app in various forms and we dec
 
 The key features are:
 1. Railtie which autoloads a scheduled stats pushed to Stats
+    1. Ruby GC Stats
+    2. Phusion Passenger (if installed)
+    3. Puma (if installed) 
 2. ActionController and ActiveRecord per request stats pushed to StatsD
+
+>
+> **Note:** If you are using Phusion Passenger you must run Passenger as a user with sudo capabilities since Passenger does not provide a facility to directly query statistics.
+> 
+> To do this add the user in the servers configuration: 
+> 
+> For Apache add PassengerUser _username_ to your server or virtual host configuration. 
+>
+> For Nginx add passenger_user _username_; to your http or server blocks.
 
 This is a work in progress and we will keep adding more features but welcome any pull requests.   
 
