@@ -20,7 +20,7 @@ module Takwimu
 
       def json_stats
         doc = Nokogiri::XML(`sudo /usr/sbin/passenger-status --show=xml`)
-        Takwimu.config.logger.error "Takwimu.json_stats - doc.blank? = #{doc.blank?}" if Takwimu.config.logger
+        Takwimu.config.logger.debug "Takwimu.json_stats - doc.blank? = #{doc.blank?}" if Takwimu.config.logger
         return {} if doc.blank?
 
         stats = {
